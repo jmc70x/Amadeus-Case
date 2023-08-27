@@ -1,0 +1,215 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.search-container {
+  background-color: #D5E5F2;
+  padding: 20px;
+  text-align: center;
+}
+
+#flight-search-form {
+  display: inline-block;
+  text-align: left;
+}
+
+#return-date[disabled] {
+  background-color: #D5E5F2;
+}
+#hero video{
+  height: 30vh;
+  width: 100%;
+  background-position: absolute;
+  z-index: 5;
+  object-fit:cover;
+  object-position: 50% 35%;
+}
+#hero {
+  position: relative;
+}
+#hero .content {
+  background: rgba(0, 0, 0, 0.1);
+  height: 100%;
+  width: 100%;
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.results-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.card {
+  border: 1px solid #D5E5F2;
+  padding: 10px;
+  margin: 10px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.input-container label {
+  width: 160px;
+  margin-right: 10px;
+}
+
+.input-container input[type="text"],
+.input-container input[type="date"] {
+  flex: 1;
+  padding: 5px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+button[type="submit"] {
+  background-color: #63B0F2;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.7s ease, transform 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #4E98D9;
+  transform: scale(1.05);
+}
+
+h1 {
+  color: #4E98D9;
+}
+
+.details {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #D5E5F2;
+}
+
+.details.active {
+  display: block;
+}
+.giris{
+  background-color: #D5E5F2;
+}
+.b1{
+  background-color: #63B0F2;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.7s ease, transform 0.3s ease;
+  padding: 10px;
+  margin-left: 1200px;
+  margin-top: 25px;
+}
+
+  button.b1:hover {
+    background-color: #4E98D9;
+    transform: scale(1.05);
+  }
+
+  .b2 {background-color: #63B0F2;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.7s ease, transform 0.3s ease;
+  padding: 10px;
+  margin-left: 1200px;
+  margin-top: 20px;
+}
+
+  button.b1:hover {
+    background-color: #4E98D9;
+    transform: scale(1.05);
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #D5E5F2;
+}
+
+li {
+    display:inline-block;
+}
+
+li a {
+    display: block;
+    color: #4E98D9;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover{
+    background-color:#4E98D9; 
+    color: white;
+}
+
+ul li ul {
+    background-color:#ACD7F2;
+    display:none;
+    position:absolute;
+    width:100px
+}
+
+ul li:hover ul{
+    display:block;
+}
+li ul li {
+    display:block; 
+}
+
+.container-1{
+  margin-top: 12px;
+}
+
+
+
+/* ... Diğer stil tanımlamaları ... */
+
+.spinner-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.spinner {
+  border: 3px solid #ACD7F2;
+  border-top-color: #4E98D9;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

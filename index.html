@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <title>Flight Search App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="hero">
+    <video autoplay loop muted> <source src="flight.mp4" type="video/mp4"></video>
+        <div class="content">
+               <div class="container">
+                    <button class="b1">Kayıt Ol</button>
+                    <button class="b2">Giriş Yap</button>
+               </div>
+            <div class="container-1">
+                    <ul>
+                        <li><a href="#index">Ana sayfa</a></li>
+                      
+                        <li><a href="#hakkımızda">Hakkımızda</a></li>
+                      
+                        <li><a href="#Ders">Uçuşlar</a></li>
+                      
+                        <li><a href="#referanslar">Blog</a></li>
+                      
+                        <li><a href="#iletisim">İletişim</a></li>
+                      </ul>
+            </div>
+            
+        </div>
+        
+
+</div>
+    
+
+    
+  <div class="search-container">
+    <h1>Uçuş Arama</h1>
+    <form id="flight-search-form">
+      <div class="input-container">
+        <label for="departure">Kalkış Havaalanı</label>
+        <select id="departure" required>
+            <option value="IST">İstanbul Atatürk Havalimanı (IST)</option>
+            <option value="LHR">Heathrow (LHR)</option>
+            <option value="CHD">Charles De Gaulle (CHD)</option>
+            <option value="ANK">Ankara Esenboğa Havalimanı (ANK)</option>
+          <!-- Diğer havaalanları eklenebilir -->
+        </select>
+      </div>
+      
+      <div class="input-container">
+        <label for="arrival">Varış Havaalanı</label>
+        <select id="arrival" required>
+          <option value="IST">İstanbul Atatürk Havalimanı (IST)</option>
+          <option value="LHR">Heathrow (LHR)</option>
+          <option value="CHD">Charles De Gaulle (CHD)</option>
+          <option value="ANK">Ankara Esenboğa Havalimanı (ANK)</option>
+          <!-- Diğer havaalanları eklenebilir -->
+        </select>
+      </div>
+      
+      <div class="input-container">
+        <label for="departure-date">Kalkış Tarihi</label>
+        <input type="date" id="departure-date" required>
+      </div>
+      
+      <div class="input-container" id="return-date-container">
+        <label for="return-date">Varış Tarihi</label>
+        <input type="date" id="return-date">
+      </div>
+      
+      <div class="input-container">
+        <label for="one-way">Tek Yönlü Uçuş</label>
+        <input type="checkbox" id="one-way" onchange="toggleReturnDate()">
+      </div>
+      
+      <button type="submit">Ara</button>
+    </form>
+  </div>
+
+    <div class="results-container" id="results">
+        <!-- Uçuş sonuçları burada listelenecek -->
+          
+      </div>
+      <div class="spinner-container" id="spinner-container">
+    <div class="spinner"></div>
+  </div>
+  </div>
+ 
+  
+</body>
+</html>
